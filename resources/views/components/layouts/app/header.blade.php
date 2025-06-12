@@ -15,6 +15,15 @@
                 <flux:navbar.item icon="layout-grid" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>
                     {{ __('Dashboard') }}
                 </flux:navbar.item>
+                <flux:navbar.item icon="plus-circle" :href="route('form')" :current="request()->routeIs('form')" wire:navigate>
+                    {{ __('New Product') }}
+                </flux:navbar.item>
+                <flux:navbar.item icon="shopping-bag" :href="route('pdtlist')" :current="request()->routeIs('pdtlist')" wire:navigate>
+                    {{ __('Products') }}
+                </flux:navbar.item>
+                <flux:navbar.item icon="shopping-cart" :href="route('advancedpdts')" :current="request()->routeIs('advancedpdts')" wire:navigate>
+                    {{ __('Advanced Products') }}
+                </flux:navbar.item>
             </flux:navbar>
 
             <flux:spacer />

@@ -3,6 +3,7 @@
 use Livewire\Volt\Volt;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Livewire\AdvancedProductsComponent;
 
 Route::get('/', function () {
     return view('welcome');
@@ -25,6 +26,8 @@ Route::get('/form', [ProductController::class, 'index'])->name('form');
 
 Route::post('/storepdt', [ProductController::class, 'store'])->name('savepdt');
 Route::get('/pdtlist', [ProductController::class,'create'])->name('pdtlist');
+
+Route::get('/advanced-pdts', AdvancedProductsComponent::class)->name('advancedpdts');
 
 
 

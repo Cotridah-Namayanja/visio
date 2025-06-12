@@ -1,9 +1,9 @@
 <x-layouts.app>
      <div class="container mx-auto px-4 my-8">
-    <div class="bg-white rounded-lg shadow-xl">
+    <div class=" rounded-lg shadow-xl">
         <div class="bg-blue-600 text-white px-6 py-4 rounded-t-lg flex justify-between items-center">
             <h4 class="text-xl font-semibold m-0">Product List</h4>
-            <a class="bg-white text-blue-600 px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors" 
+            <a class=" text-blue-600 px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors"
                href="{{ route('form') }}">Add Product</a>
         </div>
         <div class="p-6">
@@ -19,9 +19,9 @@
                             <th class="px-6 py-3 text-left">Selling Price</th>
                         </tr>
                     </thead>
-                    <tbody class="bg-white divide-y divide-gray-200">
+                    <tbody class=" divide-y divide-gray-200">
                         @foreach ($products as $index => $product)
-                        <tr class="hover:bg-gray-50">
+                        <tr class="hover:bg-gray-500">
                             <td class="px-6 py-4 whitespace-nowrap">{{ $index + 1 }}</td>
                             <td class="px-6 py-4 whitespace-nowrap">{{ $product->product_name }}</td>
                             <td class="px-6 py-4 whitespace-nowrap">{{ $product->unit }}</td>
@@ -36,6 +36,6 @@
         </div>
     </div>
 </div>
-   
+
 
     </x-layouts.app>

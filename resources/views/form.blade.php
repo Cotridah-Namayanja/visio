@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Add Product</title>
-    @vite('resources/css/app.css')
-</head>
-<body class="bg-gray-100 p-10">
+<x-layouts.app>
     <div class="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div class="max-w-md w-full space-y-8 bg-white p-8 rounded-lg shadow-md">
             <div>
@@ -82,5 +73,4 @@
             </form>
         </div>
     </div>
-</body>
-</html>
+</x-layouts.app>
