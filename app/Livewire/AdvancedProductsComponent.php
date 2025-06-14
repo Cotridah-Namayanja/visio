@@ -13,12 +13,14 @@ class AdvancedProductsComponent extends Component
     public $quantity;
     public $selling_price;
     public $buying_price;
+    public $search ='';
+
 
 
 
     public function render()   {
         return view('livewire.advanced-products-component',[
-            'products'=> Product::get()
+            'products'=> Product:: where('product_name', 'like', '%'.$this->search.'%')->get()
         ]);
     }
 
