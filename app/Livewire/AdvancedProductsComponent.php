@@ -16,8 +16,7 @@ class AdvancedProductsComponent extends Component
 
 
 
-    public function render()
-    {
+    public function render()   {
         return view('livewire.advanced-products-component',[
             'products'=> Product::get()
         ]);

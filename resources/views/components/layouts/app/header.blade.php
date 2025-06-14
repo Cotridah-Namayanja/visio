@@ -24,6 +24,9 @@
                 <flux:navbar.item icon="shopping-cart" :href="route('advancedpdts')" :current="request()->routeIs('advancedpdts')" wire:navigate>
                     {{ __('Advanced Products') }}
                 </flux:navbar.item>
+                <flux:navbar.item icon="user-plus" :href="route('suppliers')" :current="request()->routeIs('suppliers')" wire:navigate>
+                    {{ __('Suppliers') }}
+                </flux:navbar.item>
             </flux:navbar>
 
             <flux:spacer />
