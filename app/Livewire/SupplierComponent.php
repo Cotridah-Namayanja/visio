@@ -19,7 +19,7 @@ class SupplierComponent extends Component
     public function render()
     {
         return view('livewire.supplier-component', [
-            'suppliers'=>Supplier::where('supplier_name', 'like', '%'.$this->search.'%')->get()
+            'suppliers'=>Supplier::where('supplier_name', 'like', '%'.$this->search.'%')->get() 
         ]);
     }
 

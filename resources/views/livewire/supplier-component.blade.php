@@ -1,7 +1,7 @@
 <div>
     <div class="flex justify-between" >
-        <div>bsdbd</div>
-        <div>bdhhd</div>
+        {{-- <div>bsdbd</div>
+        <div>bdhhd</div> --}}
 
     </div>
     <div>
@@ -41,7 +41,7 @@
             <div>{{ $supplier->Address }}</div>
 
         </div>
-      @endforeach  
+      @endforeach
     </div>
 
 </div>

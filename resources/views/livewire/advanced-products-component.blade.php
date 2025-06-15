@@ -2,7 +2,7 @@
     {{-- A good traveler has no fixed plans and is not intent upon arriving. --}}
     <div class="grid grid-cols-3">
         <div class="col-span-2">
-            <input wire:model.live=search type="text" placeholder="search for product">
+            <flux:input class="border-transparent focus:border-0 w-2" wire:model.live=search type="text" placeholder="search for product" />
         </div>
         <div>
             <flux:modal.trigger name="add-product">
