@@ -15,4 +15,8 @@ class Product extends Model
         'selling_price'
 
     ];
+
+    public function productSupplier(){
+        return $this->hasMany(ProductSupplier::class);
+    }
 }

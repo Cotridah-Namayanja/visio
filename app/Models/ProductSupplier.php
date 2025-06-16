@@ -12,6 +12,14 @@ class ProductSupplier extends Model
         'supplier_id',
         'product_id'
     ];
-    public function supplier()
+    public function supplier(){
+        // def
+        return $this->belongsTo(Supplier::class, 'supplier_id', 'id');
+    }
+
+    public function product(){
+        return $this->belongsTo(Product::class, 'product_id', 'id');
+    }
 
 }
+ 

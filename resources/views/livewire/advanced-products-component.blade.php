@@ -44,6 +44,7 @@
                         <th class="px-6 py-3 text-left">Quantity</th>
                         <th class="px-6 py-3 text-left">Buying Price</th>
                         <th class="px-6 py-3 text-left">Selling Price</th>
+                        <th class="px-6 py-3 text-left">Action</th>
                     </tr>
                 </thead>
                 <tbody class=" divide-y divide-gray-200">
@@ -55,6 +56,9 @@
                             <td class="px-6 py-4 whitespace-nowrap">{{ $product->quantity }}</td>
                             <td class="px-6 py-4 whitespace-nowrap">{{ $product->buying_price }}</td>
                             <td class="px-6 py-4 whitespace-nowrap">{{ $product->selling_price }}</td>
+                            <td>
+                                <a  class="bg-blue-400 text-white rounded p-2" href="{{ route('productdetails', ['id'=> $product->id]) }}">Details</a>
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>
