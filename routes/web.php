@@ -2,6 +2,7 @@
 
 use Livewire\Volt\Volt;
 use App\Livewire\SupplierComponent;
+use App\Livewire\CustomersComponent;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\ProductDetailsComponent;
 use App\Http\Controllers\ProductController;
@@ -32,6 +33,9 @@ Route::get('/advanced-pdts', AdvancedProductsComponent::class)->name('advancedpd
 Route::get('/suppliers', SupplierComponent::class)->name('suppliers');
 
 Route::get('/advanced-pdts/{id}', ProductDetailsComponent::class)->name('productdetails');
+
+
+Route::get('/customers', CustomersComponent::class)->name('customers');
 });
 
 

@@ -27,6 +27,10 @@
                 <flux:navbar.item icon="user-plus" :href="route('suppliers')" :current="request()->routeIs('suppliers')" wire:navigate>
                     {{ __('Suppliers') }}
                 </flux:navbar.item>
+
+                <flux:navbar.item icon="user-plus" :href="route('customers')" :current="request()->routeIs('customers')" wire:navigate>
+                    {{ __('Customers') }}
+                </flux:navbar.item>
             </flux:navbar>
 
             <flux:spacer />
