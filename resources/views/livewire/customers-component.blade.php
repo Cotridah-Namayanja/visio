@@ -25,6 +25,7 @@
     </form>
 
      {{-- Customer Accordion List --}}
+     <h1 class="bg-center text-center font-bold text-blue-500 text-3xl">Customers</h1>
      <div class=" flex justify-center">
      <div class="space-y-2 mt-4 w-3/4">
         @forelse ($customers as $index => $customer)
@@ -37,7 +38,7 @@
             @endif
             {{-- @dd($customers); --}}
                 <div class="flex justify-between items-center cursor-pointer" @click="open = !open">
-                    <div class="font-semibold">{{ $loop->iteration }} {{ $customer->customer_name }}</div>
+                    <div class="font-semibold">{{ $customer->customer_name }}</div>
                     <button type="button" class=" black hover"><flux:icon name="chevron-down" /></button>
                 </div>
                 <div x-show="open" x-transition class="mt-2 text-sm text-gray-700">
