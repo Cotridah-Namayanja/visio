@@ -24,33 +24,31 @@
     </div>
     </form>
 
-    {{-- If your happiness depends on money, you will never be happy with yourself. --}}
+     {{-- Customer Accordion List --}}
+     <div class=" flex justify-center">
+     <div class="space-y-2 mt-4 w-3/4">
+        @forelse ($customers as $index => $customer)
+            @if ($loop->iteration==1)
+            <div x-data="{ open: true }" class="border rounded-sm shadow-sm p-2 w-full">
 
-    <div>
-        @forelse ($customers as $customer )
+            @else
+            <div x-data="{ open: false }" class="border rounded-sm shadow-sm p-2 w-full">
 
-        <div>
-            <div class="flex">
-                <div>
-                    {{ $customer->customer_name  }}
+            @endif
+            {{-- @dd($customers); --}}
+                <div class="flex justify-between items-center cursor-pointer" @click="open = !open">
+                    <div class="font-semibold">{{ $loop->iteration }} {{ $customer->customer_name }}</div>
+                    <button type="button" class=" black hover"><flux:icon name="chevron-down" /></button>
                 </div>
-                <div>
-                    <button>
-                        detail
-                    </button>
+                <div x-show="open" x-transition class="mt-2 text-sm text-gray-700">
+                    <div><strong>Contact:</strong> {{ $customer->contact }}</div>
+                    <div><strong>Address:</strong> {{ $customer->address }}</div>
                 </div>
             </div>
-            <div>
-                {{ $customer->contact }}
-                {{ $customer->Address}}
-
-
-            </div>
-        </div>
-
         @empty
-
+            <div class="text-gray-500">No customers found.</div>
         @endforelse
     </div>
+</div>
 
 </div

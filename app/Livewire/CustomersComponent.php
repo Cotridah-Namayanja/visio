@@ -9,7 +9,7 @@ use App\Livewire\CustomersComponent;
 
 class CustomersComponent extends Component
 {
-    public $customer_name;
+    public $customer_name='Cots';
     public $contact;
     public $Address;
 
