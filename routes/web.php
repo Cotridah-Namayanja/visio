@@ -1,8 +1,10 @@
 <?php
 
 use Livewire\Volt\Volt;
+use App\Livewire\SalesForm;
 use App\Livewire\SupplierComponent;
 use App\Livewire\CustomersComponent;
+use App\Livewire\DashboardComponent;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\ProductDetailsComponent;
 use App\Http\Controllers\ProductController;
@@ -12,7 +14,7 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-Route::view('dashboard', 'dashboard')
+Route::get('dashboard', DashboardComponent::class)
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 
@@ -36,7 +38,12 @@ Route::get('/advanced-pdts/{id}', ProductDetailsComponent::class)->name('product
 
 
 Route::get('/customers', CustomersComponent::class)->name('customers');
+
+Route::get('/sales', SalesForm::class)->name('sales');
+
 });
+
+
 
 
 

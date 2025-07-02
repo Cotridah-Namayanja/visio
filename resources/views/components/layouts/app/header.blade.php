@@ -32,7 +32,13 @@
                 <flux:navbar.item icon="user-plus" :href="route('customers')" :current="request()->routeIs('customers')" wire:navigate>
                     {{ __('Customers') }}
                 </flux:navbar.item>
+                <flux:navbar.item icon="receipt-percent" :href="route('sales')" :current="request()->routeIs('sales')" wire:navigate>
+                    {{ __('Sales') }}
+                </flux:navbar.item>
+
             </flux:navbar>
+
+
 
             <flux:spacer />
 

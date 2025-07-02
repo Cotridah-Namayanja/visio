@@ -14,17 +14,20 @@ class SupplierComponent extends Component
     public $Address;
     public $Email_address;
     public $search ='';
-    
+
+    // public $suppliers = [];
+
+
 
     public function render()
     {
         return view('livewire.supplier-component', [
-            'suppliers'=>Supplier::where('supplier_name', 'like', '%'.$this->search.'%')->get() 
+            'suppliers'=>Supplier::where('supplier_name', 'like', '%'.$this->search.'%')->get()
         ]);
     }
 
     public function suppliers(){
-        
+
         Supplier::create([
             'supplier_name' => $this->supplier_name,
             'supplier_contact'=>$this->supplier_contact,
